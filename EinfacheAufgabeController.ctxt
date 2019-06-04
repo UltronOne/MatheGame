@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=EinfacheAufgabeController
+comment1.params=zahl1\ zahl2\ s
+comment1.target=void\ neueAufgabe(int,\ int,\ java.lang.String)
+comment1.text=\r\n\ Setzt\ den\ Aufgabentext\r\n
+comment2.params=event
+comment2.target=void\ keyPressed(javafx.scene.input.KeyEvent)
+comment3.params=
+comment3.target=int\ getAntwort()
+comment3.text=\r\n\ Holt\ die\ eingegebene\ Antwort\r\n
+numComments=4

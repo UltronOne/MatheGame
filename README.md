@@ -1,2 +1,8 @@
-# MatheGame
-Ein sehr tolles Spiel 
+# Matheapp
+
+11. Klasse
+
+## Themen
+* Softwareentwicklung
+* JavaFX
+* Scrum
