@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=EinfacheAufgabeController
-comment1.params=zahl1\ zahl2\ zahl3\ zeichen
-comment1.target=void\ neueAufgabe(int,\ int,\ int,\ java.lang.String)
+comment1.params=zahl1\ zahl2\ zahl3
+comment1.target=void\ neueAufgabe(int,\ int,\ int)
 comment1.text=\r\n\ Setzt\ den\ Aufgabentext\r\n
 comment2.params=
 comment2.target=int\ getAntwort()
