@@ -11,7 +11,8 @@ public class Controller
     // Anzeige der erreichten Punkte
     @FXML 
     private Label lblPunkte; 
-    
+    @FXML
+    private Label rechenzeichen;
     // Der Button Prüfen oder Weiter
     @FXML
     private Button button;
@@ -26,8 +27,7 @@ public class Controller
     // Anzeige, ob die Lösung richtig war
     @FXML
     private Label lblErgebnis;
-@FXML
-    private Label rechenzeichen;
+
     // Anzahl der Gesamtpunktzahl
     private int punkte;
 
@@ -82,19 +82,19 @@ public class Controller
          a= new EinfacheAufgabe();
           
         }
-        // else if (i ==1)
-        // {
-         // a= new Minus();
+         else if (i ==1)
+        {
+          a= new Minus();
           
-        // }
-        // else if (i ==2)
-        // {
-        // a =new Multi();
-    // }
-    // else if (i==3)
-    // {
-        // a= new Divi();
-    // }
+        }
+         else if (i ==2)
+        {
+        a =new Multi();
+     }
+     else if (i==3)
+    {
+        a= new Divi();
+    }
     inhalt.getChildren().clear();
     inhalt.getChildren().add(a.darstellungErstellen());
         // Punktstand am Anfang ist 0
@@ -114,26 +114,26 @@ public class Controller
     void initialize() {    
         
         Random r =new  Random(); 
-        int i = r.nextInt(1);
+        int i = r.nextInt(4);
         if (i== 0)
         {
          a= new EinfacheAufgabe();
           
         }
-        // else if (i ==1)
-        // {
-         // a= new Minus();
+        else if (i ==1)
+        {
+         a= new Minus();
           
-        // }
-        // else if (i ==2)
-        // {
-        // a =new Multi();
+        }
+        else if (i ==2)
+        {
+        a =new Multi();
          
-    // }
-    // else if (i==3)
-    // {
-        // a= new Divi();
-    // }
+    }
+    else if (i==3)
+    {
+        a= new Divi();
+    }
         // fügt die Darstellung der einfachen Aufgabe in die Oberfläche ein
         inhalt.getChildren().add(a.darstellungErstellen());
         // Punktstand am Anfang ist 0

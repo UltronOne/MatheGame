@@ -47,7 +47,8 @@ private int zahl3;
         zahl1 = random.nextInt(100);
         zahl2 = random.nextInt(100);
         zahl3 = random.nextInt(100);
-        controller.neueAufgabe(zahl1, zahl2, zahl3);
+        controller.neueAufgabe(zahl1, zahl2, zahl3,"+");
+        
     }
 
     /*

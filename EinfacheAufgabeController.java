@@ -23,12 +23,13 @@ public class EinfacheAufgabeController {
     /*
      * Setzt den Aufgabentext
      */
-    public void neueAufgabe(int zahl1, int zahl2,int zahl3)
+    public void neueAufgabe(int zahl1, int zahl2,int zahl3,String zeichen)
     {
         aufgabentext.setText(zahl1 +"");
         aufgabentext1.setText(zahl2+ "");
         aufgabentext2.setText(zahl3+ "");
         //antwort.setText(zahl1 + zahl2);
+        rechenzeichen.setText(zeichen);
     }
 
     /*
