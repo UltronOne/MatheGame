@@ -29,7 +29,7 @@ public class EinfacheAufgabeController {
         aufgabentext1.setText(zahl2+ "");
         aufgabentext2.setText(zahl3+ "");
         //antwort.setText(zahl1 + zahl2);
-        rechenzeichen.setText(zeichen);
+        rechenzeichen.setText("Rechenart: "+zeichen);
     }
 
     /*
