@@ -7,13 +7,11 @@ public abstract class Aufgabe
     // Methoden
     public abstract void richtigeLoesungAnzeigen();
 
-    public abstract boolean loesungUeberpruefen(String typ);
+    public abstract boolean loesungUeberpruefen();
 
     public abstract Pane darstellungErstellen();
     
     public abstract void neu();
-    
-    public abstract String getTyp();
 
     public int getPunkte()
     {

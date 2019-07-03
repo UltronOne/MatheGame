@@ -1,8 +1,8 @@
 #BlueJ class context
-comment0.target=EinfacheAufgabe
+comment0.target=Divi
 comment0.text=\r\nEinfachste\ Variante\ einer\ Aufgabe\r\nZwei\ Zahlen\ werden\ zuf\u00E4llig\ gew\u00E4hlt.\ Wenn\ das\ Ergebnis\ die\ Summe\ der\ Zahlen\ war,\ ist\ die\ Aufgabe\ richtig\ gel\u00F6st\ worden\r\n
 comment1.params=
-comment1.target=EinfacheAufgabe()
+comment1.target=Divi()
 comment2.params=
 comment2.target=void\ richtigeLoesungAnzeigen()
 comment2.text=\r\n\ Diese\ Methode\ wird\ noch\ nicht\ verwendet\r\n

@@ -13,22 +13,19 @@ public class EinfacheAufgabe extends Aufgabe
     // Die beiden Zahlen
     private int zahl1;
     private int zahl2;
-    private String aufgabe;
-
+private int zahl3;
     // Zufallsgenerator
     private Random random; 
 
     // Darstellung der Aufgabe
     private EinfacheAufgabeController controller;
 
-    private String typString;
-    private int typ;
     // Konstruktor
     public EinfacheAufgabe()
     {
         super(); //Aufruf des Konstruktors der Superklasse, könnte hier auch weggelassen werden
 
-          // Soviele Punkte ist diese einfache Aufgabe wert
+        punkte = 1;  // Soviele Punkte ist diese einfache Aufgabe wert
 
         // Erstellt ein Objekt für neue Zufallszahlen
         random = new Random();     
@@ -49,79 +46,26 @@ public class EinfacheAufgabe extends Aufgabe
     {
         zahl1 = random.nextInt(100);
         zahl2 = random.nextInt(100);
-        typ = random.nextInt(4)+1;
-        System.out.println(typ);
-        switch(typ) {
-            case 1:
-            typString = "+";
-            punkte = 1;
-            controller.neueAufgabe(zahl1, zahl2, "+");
-            break;
-            case 2:
-            typString = "-";
-            punkte = 1;
-            controller.neueAufgabe(zahl1, zahl2, "-");
-            break;
-            case 3:
-            typString = "*";
-            punkte = 2;
-            controller.neueAufgabe(zahl1, zahl2, "*");
-            break;    
-            case 4:
-            typString = "/";
-            punkte = 2;
-            controller.neueAufgabe(zahl1, zahl2, "/");
-            break;
-        }
+        zahl3 = random.nextInt(100);
+        controller.neueAufgabe(zahl1, zahl2, zahl3);
     }
 
     /*
      * Überprüft, ob die gegebene Antwort richtig war
      */
-    public boolean loesungUeberpruefen(String typp){
+    public boolean loesungUeberpruefen(){
         int antwort = controller.getAntwort();
-
-        switch(typp) {
-            case "+":
-           
-             if (zahl1 + zahl2 == antwort){
-                return true;
-            }
-            
-            
-            break;          
-
-            case "-":
-            if (zahl1 - zahl2 == antwort)
-            {
-                return true;
-            }
-            
-            break;
-            
-            case"*":
-            if (zahl1 * zahl2 == antwort)
-            {
-                return true;
-            }
-            
-            break; 
-            
-            case "/":
-            if (zahl1 / zahl2 == antwort)
-            {
-                return true;
-            }
-            
-            break;
-           
+        int antwort1 = controller.getAntwort1();
+        int antwort2 = controller.getAntwort2();
+        if (zahl2 - antwort == zahl1 && antwort + zahl3 == antwort1&& antwort1+zahl2==antwort2)
+        {
+            return true;
         }
+        else
+        {
             return false;
-    }
+        }
 
-    public String getTyp(){
-
-        return typString ;
     }
 
     /*

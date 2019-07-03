@@ -7,11 +7,11 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <top>
       <AnchorPane BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="37.0" prefHeight="67.0" prefWidth="573.0" text="Mathe!" textFill="RED">
+            <Label layoutX="37.0" prefHeight="67.0" prefWidth="573.0" text="Mathe!">
                <font>
                   <Font size="32.0" />
                </font>
@@ -39,7 +39,7 @@
       <StackPane fx:id="inhalt" BorderPane.alignment="CENTER" />
    </center>
    <bottom>
-      <AnchorPane onKeyPressed="#keyPressed" prefHeight="69.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="69.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="button" layoutX="499.0" layoutY="15.0" mnemonicParsing="false" onAction="#buttonGeklickt" text="Prüfen" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="25.0">
                <font>
