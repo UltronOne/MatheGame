@@ -3,12 +3,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.control.*;
 import javafx.scene.layout.StackPane;
-import javafx.scene.input.KeyCode;
-
-
+import java.util.Random;
 public class Controller
 {
     // Anzeige der erreichten Punkte
@@ -29,7 +26,8 @@ public class Controller
     // Anzeige, ob die Lösung richtig war
     @FXML
     private Label lblErgebnis;
-
+@FXML
+    private Label rechenzeichen;
     // Anzahl der Gesamtpunktzahl
     private int punkte;
 
@@ -44,20 +42,14 @@ public class Controller
 
     @FXML
     void buttonGeklickt(ActionEvent event) {
-        check();
-    }
-   
-    
-    public void check(){
-        
-     switch (zustand)
+       
+        switch (zustand)
         {
             case 0: { // Zustand Aufgabe gestellt
                 
                 // Es wird überprüft, ob die richtige Lösung eingegeben wurde
 
-                boolean ergebnis = a.loesungUeberpruefen(a.getTyp());
-                
+                boolean ergebnis = a.loesungUeberpruefen();
                 if (ergebnis)
                 {
                     // Richtig
@@ -82,20 +74,36 @@ public class Controller
                 button.setText("Prüfen!"); 
                 lblErgebnis.setText("");
                 zustand = 0; // Zustand wird wieder auf Aufgabe gestellt gesetzt
-            } break;
-
-        }   
+            }
+            Random r =new  Random(); 
+        int i = r.nextInt(4);
+        if (i== 0)
+        {
+         a= new EinfacheAufgabe();
+          
+        }
+        // else if (i ==1)
+        // {
+         // a= new Minus();
+          
+        // }
+        // else if (i ==2)
+        // {
+        // a =new Multi();
+    // }
+    // else if (i==3)
+    // {
+        // a= new Divi();
+    // }
+    inhalt.getChildren().clear();
+    inhalt.getChildren().add(a.darstellungErstellen());
+        // Punktstand am Anfang ist 0
+       
+        // Die Anwendung befindet sich im Zustand Aufgabe gestellt
+        zustand = 0;
+        lblErgebnis.setText("");
+            break;
         
-        
-        
-        
-    }
-    
-    @FXML
-    void keyPressed(KeyEvent event) {
-        System.out.println("abc");
-        if (event.getCode() == KeyCode.ENTER){
-             check();   
         }
     }
     /*
@@ -103,9 +111,29 @@ public class Controller
      */
   
     @FXML 
-    void initialize() {      
-        // Erstellt eine neue Einfache Aufgabe
-        a = new EinfacheAufgabe();
+    void initialize() {    
+        
+        Random r =new  Random(); 
+        int i = r.nextInt(1);
+        if (i== 0)
+        {
+         a= new EinfacheAufgabe();
+          
+        }
+        // else if (i ==1)
+        // {
+         // a= new Minus();
+          
+        // }
+        // else if (i ==2)
+        // {
+        // a =new Multi();
+         
+    // }
+    // else if (i==3)
+    // {
+        // a= new Divi();
+    // }
         // fügt die Darstellung der einfachen Aufgabe in die Oberfläche ein
         inhalt.getChildren().add(a.darstellungErstellen());
         // Punktstand am Anfang ist 0

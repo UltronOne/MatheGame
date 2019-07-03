@@ -7,15 +7,36 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EinfacheAufgabeController">
    <children>
-      <Label fx:id="aufgabentext" layoutX="63.0" layoutY="117.0" prefHeight="38.0" prefWidth="171.0" text="Aufgabe">
+      <Label fx:id="aufgabentext" layoutX="74.0" layoutY="202.0" prefHeight="38.0" prefWidth="102.0" text="Aufgabe">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
-      <TextField fx:id="antwort" layoutX="251.0" layoutY="111.0" onKeyPressed="#keyPressed" prefHeight="51.0" prefWidth="102.0">
+      <TextField fx:id="antwort" layoutX="149.0" layoutY="202.0" prefHeight="51.0" prefWidth="102.0">
          <font>
             <Font size="24.0" />
          </font>
       </TextField>
+      <Label fx:id="aufgabentext1" layoutX="125.0" layoutY="146.0" prefHeight="38.0" prefWidth="102.0" text="Aufgabe">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="aufgabentext2" layoutX="313.0" layoutY="202.0" prefHeight="38.0" prefWidth="102.0" text="Aufgabe">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="antwort1" layoutX="211.0" layoutY="139.0" prefHeight="51.0" prefWidth="102.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="antwort2" layoutX="160.0" layoutY="73.0" prefHeight="51.0" prefWidth="102.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <Label fx:id="rechenzeichen" layoutX="22.0" layoutY="245.0" text="Label" />
    </children>
 </AnchorPane>
