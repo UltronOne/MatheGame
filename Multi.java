@@ -5,10 +5,10 @@ import java.util.Random;
 
 /*
 Einfachste Variante einer Aufgabe
-Zwei Zahlen werden zufällig gewählt. Wenn das Ergebnis die Summe der Zahlen war, ist die Aufgabe richtig gelöst worden
+// Zwei Zahlen werden zufällig gewählt. Wenn das Ergebnis die Summe der Zahlen war, ist die Aufgabe richtig gelöst worden
  */
 
-public class EinfacheAufgabe extends Aufgabe
+public class Multi extends Aufgabe
 {
     // Die beiden Zahlen
     private int zahl1;
@@ -21,11 +21,11 @@ private int zahl3;
     private EinfacheAufgabeController controller;
 
     // Konstruktor
-    public EinfacheAufgabe()
+    public Multi()
     {
         super(); //Aufruf des Konstruktors der Superklasse, könnte hier auch weggelassen werden
 
-        punkte = 1;  // Soviele Punkte ist diese einfache Aufgabe wert
+        punkte = 4;  // Soviele Punkte ist diese einfache Aufgabe wert
 
         // Erstellt ein Objekt für neue Zufallszahlen
         random = new Random();     
@@ -44,11 +44,11 @@ private int zahl3;
      */
     public void neu()
     {
-        zahl1 = random.nextInt(100);
-        zahl2 = random.nextInt(100);
-        zahl3 = random.nextInt(100);
-        controller.neueAufgabe(zahl1, zahl2, zahl3,"+");
         
+        zahl1 = random.nextInt(10)+2;
+        zahl2 = zahl1 * random.nextInt(5)+2;
+        zahl3 = random.nextInt(5)+2;
+        controller.neueAufgabe(zahl1, zahl2,zahl3, "*");
     }
 
     /*
@@ -58,7 +58,8 @@ private int zahl3;
         int antwort = controller.getAntwort();
         int antwort1 = controller.getAntwort1();
         int antwort2 = controller.getAntwort2();
-        if (zahl2 - antwort == zahl1 && antwort + zahl3 == antwort1&& antwort1+zahl2==antwort2)
+        
+        if (zahl1 * antwort == zahl2 && zahl3 * antwort == antwort1 && zahl2 * antwort1 == antwort2)
         {
             return true;
         }
