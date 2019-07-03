@@ -12,7 +12,7 @@
             <Font size="26.0" />
          </font>
       </Label>
-      <TextField fx:id="antwort" layoutX="160.0" layoutY="203.0" prefHeight="51.0" prefWidth="102.0" style="-fx-background-color: #f5a17a;">
+      <TextField fx:id="antwort" alignment="CENTER" layoutX="160.0" layoutY="203.0" prefHeight="51.0" prefWidth="102.0" style="-fx-background-color: #f5a17a;">
          <font>
             <Font size="24.0" />
          </font>
@@ -27,12 +27,12 @@
             <Font size="26.0" />
          </font>
       </Label>
-      <TextField fx:id="antwort1" layoutX="211.0" layoutY="139.0" prefHeight="51.0" prefWidth="102.0" style="-fx-background-color: #f5a17a;">
+      <TextField fx:id="antwort1" alignment="CENTER" layoutX="211.0" layoutY="139.0" prefHeight="51.0" prefWidth="102.0" style="-fx-background-color: #f5a17a;">
          <font>
             <Font size="24.0" />
          </font>
       </TextField>
-      <TextField fx:id="antwort2" layoutX="160.0" layoutY="73.0" prefHeight="51.0" prefWidth="102.0" style="-fx-background-color: #f5a17a;">
+      <TextField fx:id="antwort2" alignment="CENTER" layoutX="160.0" layoutY="73.0" prefHeight="51.0" prefWidth="102.0" style="-fx-background-color: #f5a17a;">
          <font>
             <Font size="24.0" />
          </font>
