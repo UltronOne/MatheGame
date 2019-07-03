@@ -3,6 +3,7 @@ import javafx.fxml.FXMLLoader;
 import java.io.IOException;
 import java.util.Random;
 
+
 /*
 Einfachste Variante einer Aufgabe
 Zwei Zahlen werden zufällig gewählt. Wenn das Ergebnis die Summe der Zahlen war, ist die Aufgabe richtig gelöst worden
@@ -18,10 +19,13 @@ public class EinfacheAufgabe extends Aufgabe
     // Zufallsgenerator
     private Random random; 
 
+
     // Darstellung der Aufgabe
     private EinfacheAufgabeController controller;
+    
 
     private String typString;
+    
     private int typ;
     // Konstruktor
     public EinfacheAufgabe()
@@ -41,6 +45,8 @@ public class EinfacheAufgabe extends Aufgabe
      */
     public  void richtigeLoesungAnzeigen(){}
 
+    
+    
     /*
      * Erstellt eine neue Aufgabe
      * Wählt die beiden Zahlen zahl1 und zahl2 neu zwischen 0 und 100
@@ -128,13 +134,14 @@ public class EinfacheAufgabe extends Aufgabe
      * Erstellt eine Darstellung für die einfache Aufgabe und gibt das Pane mit der Oberfläche zurück
      * Mit jedem Aufruf wird eine neue einfache Aufgabe mit anderen Zahlen erstellt
      */
-    public  Pane darstellungErstellen(){
+    public  Pane darstellungErstellen(Controller c){
         // Lädt die Oberfläche 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("einfacheaufgabe_view.fxml")); 
 
         try {
             Pane view = (Pane) loader.load();
             controller = loader.getController();
+
             // Füllt sie mit neuen Zahlen
             neu();
             // Gibt die neue Oberfläche zurück

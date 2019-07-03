@@ -9,15 +9,15 @@ public abstract class Aufgabe
 
     public abstract boolean loesungUeberpruefen(String typ);
 
-    public abstract Pane darstellungErstellen();
-    
+    public abstract Pane darstellungErstellen(Controller c);
+
     public abstract void neu();
-    
+
     public abstract String getTyp();
 
     public int getPunkte()
     {
         return punkte;
     }
-
 }
+
