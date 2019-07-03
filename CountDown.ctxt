@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=CountDown
+comment1.params=progressIndicator\ c
+comment1.target=CountDown(javafx.scene.control.ProgressIndicator,\ Controller)
+comment2.params=
+comment2.target=void\ run()
+numComments=3
