@@ -16,6 +16,8 @@ public class Controller
     // Der Button Prüfen oder Weiter
     @FXML
     private Button button;
+@FXML
+    private ProgressIndicator progressIndicator;
 
     // Anzeige der Aufgabe
     @FXML
@@ -30,7 +32,12 @@ public class Controller
 
     // Anzahl der Gesamtpunktzahl
     private int punkte;
+    
 
+    private double count = 0;
+    private int i = 200;
+    private int zwischen = 0;
+    String s;
     // Zustand
     int zustand; // 0: Aufgabe gestellt / 1: Antwort getippt
 
@@ -103,7 +110,10 @@ public class Controller
         zustand = 0;
         lblErgebnis.setText("");
             break;
-        
+        if(punkte == 0 && zwischen >= 1 && auswahl == 1){
+            inhalt.getChildren().add(new Label("GAME OVER"));
+        }
+
         }
     }
     /*
@@ -118,21 +128,22 @@ public class Controller
         if (i== 0)
         {
          a= new EinfacheAufgabe();
-          
+                  progressIndicator.setVisible(false);
         }
         else if (i ==1)
         {
          a= new Minus();
-          
+                  progressIndicator.setVisible(false);
         }
         else if (i ==2)
         {
         a =new Multi();
-         
+                 progressIndicator.setVisible(false);
     }
     else if (i==3)
     {
         a= new Divi();
+                progressIndicator.setVisible(false);
     }
         // fügt die Darstellung der einfachen Aufgabe in die Oberfläche ein
         inhalt.getChildren().add(a.darstellungErstellen());
@@ -141,5 +152,43 @@ public class Controller
         // Die Anwendung befindet sich im Zustand Aufgabe gestellt
         zustand = 0;
         lblErgebnis.setText("");
+        // Punktstand am Anfang ist 0
+        punkte = 0;
+        // Die Anwendung befindet sich im Zustand Aufgabe gestellt
+        zustand = 0;
+        lblErgebnis.setText("");
+        
+        if(auswahl == 1){
+            progressIndicator.setVisible(true);
+
+            Timer timer = new Timer();
+            timer.scheduleAtFixedRate(new TimerTask() {
+                    @Override
+                    public void run() {
+
+                             Platform.runLater(new Runnable() {
+
+                                @Override
+                                public void run() {
+                                    if(count < 1){
+                                        count = count+ 0.01;
+                                        progressIndicator.setProgress(count);
+                                    }
+                                    if(count >= 1 && count<100){
+                                        count = count+ 1000;
+                                        System.out.println("check");
+                                        check();
+                                        i = i - 2;
+                                        count = 0;
+                                        a.neu();
+                                    }
+                                }
+                            });
+                    }
+                }, 0, i);
+        }
+        else{
+            System.out.println("NEEEIIIINN");
+        }
     }
 }
