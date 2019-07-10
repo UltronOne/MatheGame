@@ -94,7 +94,7 @@ public class Controller
                 zustand = 0; // Zustand wird wieder auf Aufgabe gestellt gesetzt
             }
             Random r =new  Random(); 
-        int i = r.nextInt(4);
+        int i = r.nextInt(3);
         if (i== 0)
         {
          a= new EinfacheAufgabe();
@@ -109,10 +109,7 @@ public class Controller
         {
         a =new Multi();
      }
-     else if (i==3)
-    {
-        a= new Divi();
-    }
+     
     inhalt.getChildren().clear();
     inhalt.getChildren().add(a.darstellungErstellen());
         // Punktstand am Anfang ist 0
@@ -132,7 +129,7 @@ public class Controller
     void initialize() {    
         
         Random r =new  Random(); 
-        int i = r.nextInt(4);
+        int i = r.nextInt(3);
         if (i== 0)
         {
          a= new EinfacheAufgabe();
@@ -148,10 +145,7 @@ public class Controller
         a =new Multi();
          
     }
-    else if (i==3)
-    {
-        a= new Divi();
-    }
+    
         // fügt die Darstellung der einfachen Aufgabe in die Oberfläche ein
         inhalt.getChildren().add(a.darstellungErstellen());
         // Punktstand am Anfang ist 0

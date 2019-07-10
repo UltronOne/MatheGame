@@ -46,7 +46,7 @@ private int zahl3;
     {
         
         zahl1 = random.nextInt(10)+2;
-        zahl2 = zahl1 * random.nextInt(5)+2;
+        zahl2 = zahl1 * (random.nextInt(5)+2);
         zahl3 = random.nextInt(5)+2;
         controller.neueAufgabe(zahl1, zahl2,zahl3, "*");
     }
