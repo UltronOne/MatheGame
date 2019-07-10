@@ -20,6 +20,9 @@ public class EinfacheAufgabeController {
     private TextField antwort1;
     @FXML
     private TextField antwort2;
+    
+    
+    
     /*
      * Setzt den Aufgabentext
      */

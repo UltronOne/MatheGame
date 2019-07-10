@@ -6,6 +6,12 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.StackPane;
 import java.util.Random;
+import javafx.scene.Parent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.scene.Node;
+
 public class Controller
 {
     // Anzeige der erreichten Punkte
@@ -34,6 +40,18 @@ public class Controller
     // Zustand
     int zustand; // 0: Aufgabe gestellt / 1: Antwort getippt
 
+    
+    @FXML
+    private Button btnBack;
+
+    @FXML
+    void actBack(ActionEvent event) throws Exception{
+       Parent blah = FXMLLoader.load(getClass().getResource("main.fxml"));
+            Scene scene = new Scene(blah);
+            Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            appStage.setScene(scene);
+            appStage.show();     
+    }
     /*
      * Wenn auf den Button geklickt wurde, wird diese Methode aufgerufen
      * Je nach Zustand wird etwas anderes auf dem Button angezeigt und tut

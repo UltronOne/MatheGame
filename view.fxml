@@ -54,7 +54,7 @@
    <bottom>
       <AnchorPane prefHeight="69.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="button" layoutX="499.0" layoutY="15.0" mnemonicParsing="false" onAction="#buttonGeklickt" text="Prüfen" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="25.0">
+            <Button fx:id="button" layoutX="392.0" layoutY="19.0" mnemonicParsing="false" onAction="#buttonGeklickt" text="Prüfen" AnchorPane.bottomAnchor="13.0" AnchorPane.rightAnchor="128.0">
                <font>
                   <Font name="Comic Sans MS" size="18.0" />
                </font>
@@ -64,6 +64,11 @@
                   <Font name="Comic Sans MS" size="24.0" />
                </font>
             </Label>
+            <Button fx:id="btnBack" layoutX="506.0" layoutY="18.0" mnemonicParsing="false" onAction="#actBack" prefHeight="38.0" prefWidth="80.0" text="Zurück">
+               <font>
+                  <Font name="Comic Sans MS" size="15.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </bottom>
