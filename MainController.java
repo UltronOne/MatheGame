@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.Node;
+import javafx.scene.text.Text;
 
 public class MainController {
 
@@ -25,6 +26,21 @@ public class MainController {
 
     @FXML
     private Button btnScoreboard;
+   
+    @FXML
+    private Text Menü;
+
+    
+
+    @FXML
+    void actFreeplay(ActionEvent event) {
+
+    }
+
+    @FXML
+    void actScoreboard(ActionEvent event) {
+
+    }
 
     
      @FXML
