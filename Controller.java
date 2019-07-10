@@ -11,7 +11,8 @@ public class Controller
     // Anzeige der erreichten Punkte
     @FXML 
     private Label lblPunkte; 
-    
+    @FXML
+    private Label rechenzeichen;
     // Der Button Prüfen oder Weiter
     @FXML
     private Button button;
@@ -26,8 +27,7 @@ public class Controller
     // Anzeige, ob die Lösung richtig war
     @FXML
     private Label lblErgebnis;
-@FXML
-    private Label rechenzeichen;
+
     // Anzahl der Gesamtpunktzahl
     private int punkte;
 
@@ -76,22 +76,22 @@ public class Controller
                 zustand = 0; // Zustand wird wieder auf Aufgabe gestellt gesetzt
             }
             Random r =new  Random(); 
-        int i = r.nextInt(4);
+        int i = r.nextInt(3);
         if (i== 0)
         {
          a= new EinfacheAufgabe();
           
         }
-        // else if (i ==1)
-        // {
-         // a= new Minus();
+         else if (i ==1)
+        {
+          a= new Minus();
           
-        // }
-        // else if (i ==2)
-        // {
-        // a =new Multi();
-    // }
-    // else if (i==3)
+        }
+         else if (i ==2)
+        {
+        a =new Multi();
+     }
+     // else if (i==3)
     // {
         // a= new Divi();
     // }
@@ -114,22 +114,22 @@ public class Controller
     void initialize() {    
         
         Random r =new  Random(); 
-        int i = r.nextInt(1);
+        int i = r.nextInt(3);
         if (i== 0)
         {
          a= new EinfacheAufgabe();
           
         }
-        // else if (i ==1)
-        // {
-         // a= new Minus();
+        else if (i ==1)
+        {
+         a= new Minus();
           
-        // }
-        // else if (i ==2)
-        // {
-        // a =new Multi();
+        }
+        else if (i ==2)
+        {
+        a =new Multi();
          
-    // }
+    }
     // else if (i==3)
     // {
         // a= new Divi();

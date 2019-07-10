@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Multi
-comment0.text=\r\nEinfachste\ Variante\ einer\ Aufgabe\r\nZwei\ Zahlen\ werden\ zuf\u00E4llig\ gew\u00E4hlt.\ Wenn\ das\ Ergebnis\ die\ Summe\ der\ Zahlen\ war,\ ist\ die\ Aufgabe\ richtig\ gel\u00F6st\ worden\r\n
+comment0.text=\r\nEinfachste\ Variante\ einer\ Aufgabe\r\n//\ Zwei\ Zahlen\ werden\ zuf\u00E4llig\ gew\u00E4hlt.\ Wenn\ das\ Ergebnis\ die\ Summe\ der\ Zahlen\ war,\ ist\ die\ Aufgabe\ richtig\ gel\u00F6st\ worden\r\n
 comment1.params=
 comment1.target=Multi()
 comment2.params=
